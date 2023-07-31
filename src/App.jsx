@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import Country from './component/Country/Country'
+import Person from './component/Person/Person'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <div className='app'>
+    {/* <LoadCountries></LoadCountries> */}
+    <Country></Country>
+    <Person></Person>
+   </div>
   )
 }
+
+// function LoadCountries(){
+//   // frist step usedState 
+//   const [countries,setCountries] = useState([])
+//   // secound step useEffect 
+//   useEffect(()=>{
+//     // thand step data fech 
+//     fetch('https://restcountries.com/v3.1/all')
+//     .then(res => res.json())
+//     // four step data set the setCountries 
+//     .then(data => setCountries(data))
+//   },[])
+//   return (
+//     <div>
+//       <h1>Visteting Country!!!</h1>
+//       <h3>countries length:{countries.length}</h3>
+//       {/* six step map to data  */}
+//       {
+//         countries.map(country => <Country name={country.name.common} population={country.population}></Country>)
+//       }
+//     </div>
+//   )
+// }
+
+// function Country(props){
+//   return (
+//     <div>
+//       <h2>Name:{props.name}</h2>
+//       <h4>Population:{props.population}</h4>
+//     </div>
+//   )
+// }
 
 export default App

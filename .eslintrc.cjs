@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  "es6": true,
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
