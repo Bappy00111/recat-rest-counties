@@ -1,7 +1,9 @@
 
 import './App.css'
-import Country from './component/Country/Country'
-import Person from './component/Person/Person'
+import Countries from './component/Countries/Countries'
+
+
+
 
 function App() {
 
@@ -9,8 +11,7 @@ function App() {
   return (
    <div className='app'>
     {/* <LoadCountries></LoadCountries> */}
-    <Country></Country>
-    <Person></Person>
+    <Countries></Countries>
    </div>
   )
 }
